@@ -1,0 +1,67 @@
+{
+  "name": "dsh-plugin-ai-daily-push",
+  "version": "0.1.0",
+  "description": "AI daily digest skill for DeepSeek Harness: searches the last 24 hours of AI news, writes a 5-item Chinese markdown brief, archives it by date and pushes it to WeChat through ServerChan, PushPlus, WxPusher or a WeCom group bot, with a cron-ready queue tick that works without the desktop app running.",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "cordis",
+    "skill",
+    "ai-news",
+    "daily-digest",
+    "wechat",
+    "push",
+    "serverchan",
+    "pushplus",
+    "wxpusher",
+    "wecom",
+    "cron"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "bin": {
+    "dsh-ai-daily": "./bin/dsh-ai-daily.mjs"
+  },
+  "scripts": {
+    "selftest": "node tools/selftest.mjs"
+  },
+  "engines": {
+    "node": ">=18",
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "files": [
+    "lib",
+    "bin",
+    "scripts",
+    "tools",
+    "SKILL.md",
+    "cordis.patch.yml",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "author": "mjm123456",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjm123456/dsh-plugin-ai-daily-push.git"
+  },
+  "homepage": "https://github.com/mjm123456/dsh-plugin-ai-daily-push#readme",
+  "bugs": {
+    "url": "https://github.com/mjm123456/dsh-plugin-ai-daily-push/issues"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
